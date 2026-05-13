@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sendli — Propales commerciales qui convertissent</title>
+  <title>sendli — Propales commerciales qui convertissent</title>
   <meta name="description" content="Sendli centralise toutes vos propales sur une page unique et trackée. Fini les mails perdus, les PDF oubliés — vos prospects ont tout sous la main." />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -131,6 +133,15 @@
       align-items: center;
       text-decoration: none;
     }
+    .logo-img {
+      height: 32px;
+      width: auto;
+      display: block;
+    }
+    .footer-logo .logo-img {
+      filter: brightness(0) invert(1);
+      height: 28px;
+    }
     .logo-text {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 700;
@@ -242,9 +253,9 @@
     #hero {
       padding: 152px 0 80px;
       background: var(--white);
-      overflow: hidden;
     }
     body.no-banner #hero { padding-top: 112px; }
+    .hero-illustration { position: relative; overflow: hidden; border-radius: 4px; }
     .hero-grid {
       display: grid;
       grid-template-columns: 60fr 40fr;
@@ -1088,7 +1099,7 @@
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 68px; left: 0; right: 0;
+        top: 108px; left: 0; right: 0;
         background: var(--white);
         border-bottom: 1px solid var(--gray-border);
         padding: 24px;
@@ -1096,23 +1107,70 @@
         box-shadow: var(--shadow-md);
         z-index: 998;
       }
+      body.no-banner nav.open { top: 68px; }
       .hamburger { display: flex; }
       .link-login { display: none; }
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-      .hero-h1 { font-size: 38px; }
+      .hero-h1 { font-size: 36px; letter-spacing: -1px; }
+      .hero-subtitle { max-width: 100%; }
+      .btn-primary.lg { width: 100%; justify-content: center; text-align: center; }
       .comparison-grid { grid-template-columns: 1fr; }
       .steps-grid { grid-template-columns: 1fr; gap: 20px; }
       .step-arrow { display: none; }
       .features-grid { grid-template-columns: 1fr; }
-      .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+      .feature-detail { padding: 24px; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
     }
+
     @media (max-width: 560px) {
+      /* Banner */
+      #top-banner { font-size: 12px; padding: 9px 40px 9px 16px; }
+
+      /* Hero */
+      #hero { padding: 136px 0 56px; }
+      body.no-banner #hero { padding-top: 96px; }
+      .hero-h1 { font-size: 30px; letter-spacing: -0.5px; }
+      .hero-subtitle { font-size: 16px; }
       .hero-checklist { flex-direction: column; gap: 10px; }
       .hero-stats { flex-direction: column; }
-      .stat-box + .stat-box::before { top: 0; left: 10%; right: 10%; bottom: auto; width: auto; height: 1px; }
-      section { padding: 64px 0; }
-      #cta-final { padding: 80px 0; }
+      .stat-box + .stat-box::before {
+        top: 0; left: 10%; right: 10%; bottom: auto;
+        width: auto; height: 1px;
+      }
+
+      /* Sections */
+      section { padding: 56px 0; }
+      .section-title { font-size: 26px; letter-spacing: -0.5px; }
+      .section-subtitle { font-size: 15px; margin-bottom: 36px; }
+
+      /* Steps */
+      .step-card { padding: 24px 20px; }
+
+      /* Features */
+      .feature-detail { padding: 20px; }
+      .builder-grid { grid-template-columns: repeat(2, 1fr); }
+
+      /* Pricing */
+      .pricing-grid { max-width: 100%; }
+      .pricing-card { padding: 32px 24px; }
       .plan-price.paid { font-size: 32px; }
+      .popular-badge { font-size: 11px; }
+
+      /* CTA */
+      #cta-final { padding: 72px 0; }
+      .cta-title { font-size: 28px; }
+      .btn-white { width: 100%; justify-content: center; }
+      .cta-note { font-size: 12px; }
+      .cta-note span { display: none; }
+      .cta-note { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+
+      /* Footer */
+      .footer-inner { flex-direction: column; gap: 16px; }
+      .footer-links { flex-wrap: wrap; gap: 16px; }
+
+      /* FAQ */
+      .faq-question { font-size: 14px; }
     }
   </style>
 </head>
@@ -1131,7 +1189,8 @@
 <header id="header">
   <div class="container header-inner">
     <a href="#" class="logo">
-      <span class="logo-text">sendli</span>
+      <img src="logo.png" alt="sendli" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span class="logo-text" style="display:none">sendli</span>
     </a>
     <nav id="main-nav">
       <a href="#fonctionnalites">Fonctionnalités</a>
@@ -1719,7 +1778,7 @@
 <footer>
   <div class="container footer-inner">
     <a href="#" class="logo footer-logo">
-      <span class="logo-text">sendli</span>
+      <img src="logo.png" alt="sendli" class="logo-img" />
     </a>
     <div class="footer-links">
       <a href="#">Mentions légales</a>
