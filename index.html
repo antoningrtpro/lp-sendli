@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>sendli — Propales commerciales qui convertissent</title>
-  <meta name="description" content="Sendli centralise toutes vos propales sur une page unique et trackée. Fini les mails perdus, les PDF oubliés — vos prospects ont tout sous la main." />
+  <title>sendli - Propales commerciales qui convertissent</title>
+  <meta name="description" content="sendli centralise toutes vos propales sur une page unique et trackée. Fini les mails perdus, les PDF oubliés - vos prospects ont tout sous la main." />
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="shortcut icon" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -671,19 +671,29 @@
       margin-bottom: 28px;
       border: 1px solid var(--gray-border);
     }
-    .feature-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .feature-bullets li {
+    .feature-tags {
       display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text);
+      flex-wrap: wrap;
+      gap: 8px;
     }
-    .bullet-dot {
-      width: 8px; height: 8px;
+    .feature-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(17,17,132,0.06);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(17,17,132,0.12);
+    }
+    .feature-tag::before {
+      content: '';
+      width: 5px; height: 5px;
       background: var(--blue);
       border-radius: 50%;
+      opacity: 0.5;
       flex-shrink: 0;
     }
 
@@ -1120,7 +1130,8 @@
       .features-grid { grid-template-columns: 1fr; }
       .feature-detail { padding: 24px; }
       .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
-      .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .footer-inner { flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+      .footer-links { justify-content: center; }
     }
 
     @media (max-width: 560px) {
@@ -1216,7 +1227,7 @@
       <div>
         <div class="badge-pill">+40% de taux de closing</div>
         <h1 class="hero-h1">Envoyez des propales qui <em>convertissent</em></h1>
-        <p class="hero-subtitle">Sendli centralise toutes vos propales sur une page unique et trackée. Fini les mails perdus, les PDF oubliés — vos prospects ont tout sous la main.</p>
+        <p class="hero-subtitle">sendli centralise toutes vos propales sur une page unique et trackée. Fini les mails perdus, les PDF oubliés - vos prospects ont tout sous la main.</p>
         <a href="https://app.sendli.fr/register" class="btn-primary lg">Créer mon compte gratuitement →</a>
         <div class="hero-checklist">
           <div class="check-item">
@@ -1300,7 +1311,7 @@
     <div class="comparison-grid">
       <div class="comp-card card-bad fade-up delay-1">
         <div class="comp-header">
-          <div class="comp-badge bad">😩 Sans Sendli</div>
+          <div class="comp-badge bad">😩 Sans sendli</div>
         </div>
         <ul class="comp-list">
           <li><div class="comp-icon bad">✗</div>Vos prospects cherchent la pièce jointe dans 10 mails</li>
@@ -1313,7 +1324,7 @@
 
       <div class="comp-card card-good fade-up delay-2">
         <div class="comp-header">
-          <div class="comp-badge good">✨ Avec Sendli</div>
+          <div class="comp-badge good">✨ Avec sendli</div>
         </div>
         <ul class="comp-list">
           <li><div class="comp-icon good">✓</div>Une page unique, accessible en un clic depuis n'importe où</li>
@@ -1326,7 +1337,7 @@
     </div>
 
     <div class="text-center fade-up">
-      <a href="https://app.sendli.fr/register" class="btn-primary lg">Essayer Sendli gratuitement →</a>
+      <a href="https://app.sendli.fr/register" class="btn-primary lg">Essayer sendli gratuitement →</a>
     </div>
   </div>
 </section>
@@ -1394,159 +1405,39 @@
 <!-- ═══════════════════ SECTION 4 — FEATURES ═══════════════════ -->
 <section id="fonctionnalites">
   <div class="container">
-    <h2 class="section-title fade-up">Tout ce qu'il vous faut pour <em>closer</em></h2>
+    <h2 class="section-title fade-up">Tout ce qu'il vous faut pour <em>closer rapidement</em></h2>
     <p class="section-subtitle fade-up delay-1">Des outils pensés pour les commerciaux qui veulent des résultats concrets.</p>
 
     <div class="features-grid">
       <!-- Left — Feature list -->
       <div class="features-list">
-        <div class="feature-item active fade-up delay-1" data-feature="builder">
+        <div class="feature-item active fade-up delay-1" data-feature="brandkit">
+          <div class="feature-item-title">Brand Kit</div>
+          <p class="feature-item-desc">Personnalisation complète à vos couleurs</p>
+        </div>
+        <div class="feature-item fade-up delay-2" data-feature="builder">
           <div class="feature-item-title">Easy Builder</div>
           <p class="feature-item-desc">Blocs prédéfinis + embed de code</p>
         </div>
-        <div class="feature-item fade-up delay-2" data-feature="analytics">
+        <div class="feature-item fade-up delay-3" data-feature="analytics">
           <div class="feature-item-title">Analytics</div>
           <p class="feature-item-desc">Tracking vus, clics, temps de lecture</p>
         </div>
-        <div class="feature-item fade-up delay-3" data-feature="notifications">
+        <div class="feature-item fade-up delay-4" data-feature="notifications">
           <div class="feature-item-title">Notifications</div>
           <p class="feature-item-desc">Alerte instantanée dès qu'un prospect interagit</p>
         </div>
-        <div class="feature-item fade-up delay-4" data-feature="integrations">
+        <div class="feature-item fade-up delay-5" data-feature="integrations">
           <div class="feature-item-title">Intégrations</div>
-          <p class="feature-item-desc">Loom, Calendly, et plus</p>
-        </div>
-        <div class="feature-item fade-up delay-5" data-feature="brandkit">
-          <div class="feature-item-title">Brand Kit</div>
-          <p class="feature-item-desc">Personnalisation complète à vos couleurs</p>
+          <p class="feature-item-desc">Google Agenda, HubSpot, Loom</p>
         </div>
       </div>
 
       <!-- Right — Feature detail -->
       <div class="feature-detail fade-up delay-2">
 
-        <!-- Easy Builder -->
-        <div class="feature-panel active" id="panel-builder">
-          <div class="feature-panel-title">Easy Builder</div>
-          <p class="feature-panel-desc">Créez vos propales par glisser-déposer avec des blocs prédéfinis : texte riche, vidéo, pricing, témoignages, signature, CTA… Intégrez n'importe quel contenu externe via code embed (Loom, Figma, Notion…).</p>
-          <div class="feature-visual">
-            <div class="builder-grid">
-              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>📝 Texte</div>
-              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>🎥 Vidéo</div>
-              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>💰 Pricing</div>
-              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>⭐ Avis</div>
-              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>✍️ Signature</div>
-              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>🔗 Embed</div>
-            </div>
-          </div>
-          <ul class="feature-bullets">
-            <li><div class="bullet-dot"></div>Blocs prêts à l'emploi</li>
-            <li><div class="bullet-dot"></div>Embed de tout contenu externe</li>
-            <li><div class="bullet-dot"></div>Réordonner en drag &amp; drop</li>
-          </ul>
-        </div>
-
-        <!-- Analytics -->
-        <div class="feature-panel" id="panel-analytics">
-          <div class="feature-panel-title">Analytics</div>
-          <p class="feature-panel-desc">Sachez exactement quand votre prospect a ouvert votre propale, combien de temps il a passé sur chaque section, ce sur quoi il a cliqué. Relancez au bon moment, avec le bon message.</p>
-          <div class="feature-visual">
-            <div style="margin-bottom:8px;font-size:12px;font-weight:600;color:var(--text-muted)">Temps passé par section (min)</div>
-            <div class="analytics-bars">
-              <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-              <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-            </div>
-            <div class="analytics-labels">
-              <span>Intro</span><span>Offre</span><span>Équipe</span>
-              <span>Prix</span><span>FAQ</span><span>Signer</span>
-            </div>
-          </div>
-          <ul class="feature-bullets">
-            <li><div class="bullet-dot"></div>Vue en temps réel</li>
-            <li><div class="bullet-dot"></div>Temps passé par section</li>
-            <li><div class="bullet-dot"></div>Historique des visites</li>
-          </ul>
-        </div>
-
-        <!-- Notifications -->
-        <div class="feature-panel" id="panel-notifications">
-          <div class="feature-panel-title">Notifications</div>
-          <p class="feature-panel-desc">Recevez une notification instantanée dès qu'un prospect ouvre votre propale, clique sur un élément ou passe plus de 2 minutes sur une section. Relancez au bon moment, avec le bon contexte, pour maximiser vos chances de closing.</p>
-          <div class="feature-visual">
-            <div class="notif-list">
-              <div class="notif-item">
-                <div class="notif-dot open"></div>
-                <div style="flex:1">
-                  <div class="notif-text">Sophie M. a ouvert votre propale</div>
-                  <div class="notif-time">Propale "Refonte site — Agence Nova"</div>
-                </div>
-                <div class="notif-ago">À l'instant</div>
-              </div>
-              <div class="notif-item">
-                <div class="notif-dot time"></div>
-                <div style="flex:1">
-                  <div class="notif-text">Marc D. passe +2 min sur la section Prix</div>
-                  <div class="notif-time">Propale "Mission RH — Cabinet Élite"</div>
-                </div>
-                <div class="notif-ago">3 min</div>
-              </div>
-              <div class="notif-item">
-                <div class="notif-dot click"></div>
-                <div style="flex:1">
-                  <div class="notif-text">Julie R. a cliqué sur "Signer la propale"</div>
-                  <div class="notif-time">Propale "Pack Growth — Startup Pixel"</div>
-                </div>
-                <div class="notif-ago">12 min</div>
-              </div>
-            </div>
-          </div>
-          <ul class="feature-bullets">
-            <li><div class="bullet-dot"></div>Notification à l'ouverture</li>
-            <li><div class="bullet-dot"></div>Alerte après 2 min sur une section</li>
-            <li><div class="bullet-dot"></div>Récap d'activité quotidien</li>
-          </ul>
-        </div>
-
-        <!-- Intégrations -->
-        <div class="feature-panel" id="panel-integrations">
-          <div class="feature-panel-title">Intégrations</div>
-          <p class="feature-panel-desc">Intégrez une vidéo Loom de présentation, un lien Calendly pour réserver directement un appel, et plus encore. Tout ce que vous utilisez déjà, dans votre propale.</p>
-          <div class="feature-visual">
-            <div class="integrations-list">
-              <div class="integration-item">
-                <div class="integration-logo" style="background:#f3f0ff">🎥</div>
-                <div class="integration-info">
-                  <div class="integration-name">Loom</div>
-                  <div class="integration-status">● Connecté</div>
-                </div>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 12V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h6" stroke="#9ca3af" stroke-width="1.5"/><path d="M15 19l2 2 4-4" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="integration-item">
-                <div class="integration-logo" style="background:#f0fff4">📅</div>
-                <div class="integration-info">
-                  <div class="integration-name">Calendly</div>
-                  <div class="integration-status">● Connecté</div>
-                </div>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 12V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h6" stroke="#9ca3af" stroke-width="1.5"/><path d="M15 19l2 2 4-4" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="integration-item" style="opacity:0.55">
-                <div class="integration-logo" style="background:#f5f5f7">🔌</div>
-                <div class="integration-info">
-                  <div class="integration-name">Embed universel</div>
-                  <div style="font-size:11px;color:var(--text-muted);font-weight:600">Bientôt disponible</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <ul class="feature-bullets">
-            <li><div class="bullet-dot"></div>Loom — vidéo de présentation</li>
-            <li><div class="bullet-dot"></div>Calendly — prise de RDV directe</li>
-            <li><div class="bullet-dot"></div>Embed universel</li>
-          </ul>
-        </div>
-
         <!-- Brand Kit -->
-        <div class="feature-panel" id="panel-brandkit">
+        <div class="feature-panel active" id="panel-brandkit">
           <div class="feature-panel-title">Brand Kit</div>
           <p class="feature-panel-desc">Importez votre logo, définissez votre palette de couleurs et vos typographies. Toutes vos propales sont automatiquement aux couleurs de votre entreprise.</p>
           <div class="feature-visual">
@@ -1572,11 +1463,132 @@
               </div>
             </div>
           </div>
-          <ul class="feature-bullets">
-            <li><div class="bullet-dot"></div>Logo + couleurs + typo</li>
-            <li><div class="bullet-dot"></div>Propales personnalisées en 1 clic</li>
-            <li><div class="bullet-dot"></div>Image de marque cohérente</li>
-          </ul>
+          <div class="feature-tags">
+            <span class="feature-tag">Logo + couleurs + typo</span>
+            <span class="feature-tag">Propales aux couleurs de votre marque</span>
+            <span class="feature-tag">Image cohérente en 1 clic</span>
+          </div>
+        </div>
+
+        <!-- Easy Builder -->
+        <div class="feature-panel" id="panel-builder">
+          <div class="feature-panel-title">Easy Builder</div>
+          <p class="feature-panel-desc">Créez vos propales par glisser-déposer avec des blocs prédéfinis : texte riche, vidéo, pricing, témoignages, signature, CTA... Intégrez n'importe quel contenu externe via code embed (Loom, Figma, Notion...).</p>
+          <div class="feature-visual">
+            <div class="builder-grid">
+              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>📝 Texte</div>
+              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>🎥 Vidéo</div>
+              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>💰 Pricing</div>
+              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>⭐ Avis</div>
+              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>✍️ Signature</div>
+              <div class="builder-block"><div class="drag-handle"><span></span><span></span><span></span></div>🔗 Embed</div>
+            </div>
+          </div>
+          <div class="feature-tags">
+            <span class="feature-tag">Blocs prêts à l'emploi</span>
+            <span class="feature-tag">Embed de tout contenu externe</span>
+            <span class="feature-tag">Réordonner en drag &amp; drop</span>
+          </div>
+        </div>
+
+        <!-- Analytics -->
+        <div class="feature-panel" id="panel-analytics">
+          <div class="feature-panel-title">Analytics</div>
+          <p class="feature-panel-desc">Sachez exactement quand votre prospect a ouvert votre propale, combien de temps il a passé sur chaque section, ce sur quoi il a cliqué. Relancez au bon moment, avec le bon message.</p>
+          <div class="feature-visual">
+            <div style="margin-bottom:8px;font-size:12px;font-weight:600;color:var(--text-muted)">Temps passé par section (min)</div>
+            <div class="analytics-bars">
+              <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+              <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            </div>
+            <div class="analytics-labels">
+              <span>Intro</span><span>Offre</span><span>Équipe</span>
+              <span>Prix</span><span>FAQ</span><span>Signer</span>
+            </div>
+          </div>
+          <div class="feature-tags">
+            <span class="feature-tag">Vue en temps réel</span>
+            <span class="feature-tag">Temps passé par section</span>
+            <span class="feature-tag">Historique des visites</span>
+          </div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="feature-panel" id="panel-notifications">
+          <div class="feature-panel-title">Notifications</div>
+          <p class="feature-panel-desc">Recevez une notification instantanée dès qu'un prospect ouvre votre propale, clique sur un élément ou passe plus de 2 minutes sur une section. Relancez au bon moment, avec le bon contexte, pour maximiser vos chances de closing.</p>
+          <div class="feature-visual">
+            <div class="notif-list">
+              <div class="notif-item">
+                <div class="notif-dot open"></div>
+                <div style="flex:1">
+                  <div class="notif-text">Sophie M. a ouvert votre propale</div>
+                  <div class="notif-time">Propale "Refonte site - Agence Nova"</div>
+                </div>
+                <div class="notif-ago">À l'instant</div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot time"></div>
+                <div style="flex:1">
+                  <div class="notif-text">Marc D. passe +2 min sur la section Prix</div>
+                  <div class="notif-time">Propale "Mission RH - Cabinet Élite"</div>
+                </div>
+                <div class="notif-ago">3 min</div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot click"></div>
+                <div style="flex:1">
+                  <div class="notif-text">Julie R. a cliqué sur "Signer la propale"</div>
+                  <div class="notif-time">Propale "Pack Growth - Startup Pixel"</div>
+                </div>
+                <div class="notif-ago">12 min</div>
+              </div>
+            </div>
+          </div>
+          <div class="feature-tags">
+            <span class="feature-tag">Notification à l'ouverture</span>
+            <span class="feature-tag">Alerte après 2 min sur une section</span>
+            <span class="feature-tag">Récap d'activité quotidien</span>
+          </div>
+        </div>
+
+        <!-- Intégrations -->
+        <div class="feature-panel" id="panel-integrations">
+          <div class="feature-panel-title">Intégrations</div>
+          <p class="feature-panel-desc">Intégrez une vidéo Loom de présentation, synchronisez votre Google Agenda ou HubSpot directement dans votre propale. Tout ce que vous utilisez déjà, au même endroit.</p>
+          <div class="feature-visual">
+            <div class="integrations-list">
+              <div class="integration-item">
+                <div class="integration-logo" style="background:#f3f0ff">🎥</div>
+                <div class="integration-info">
+                  <div class="integration-name">Loom</div>
+                  <div class="integration-status">● Connecté</div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 12V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h6" stroke="#9ca3af" stroke-width="1.5"/><path d="M15 19l2 2 4-4" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="integration-item">
+                <div class="integration-logo" style="background:#fff0f0">📅</div>
+                <div class="integration-info">
+                  <div class="integration-name">Google Agenda</div>
+                  <div class="integration-status">● Connecté</div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 12V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h6" stroke="#9ca3af" stroke-width="1.5"/><path d="M15 19l2 2 4-4" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="integration-item">
+                <div class="integration-logo" style="background:#fff7ed">🧩</div>
+                <div class="integration-info">
+                  <div class="integration-name">HubSpot</div>
+                  <div class="integration-status">● Connecté</div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 12V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h6" stroke="#9ca3af" stroke-width="1.5"/><path d="M15 19l2 2 4-4" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="feature-tags">
+            <span class="feature-tag">Loom - vidéo de présentation</span>
+            <span class="feature-tag">Google Agenda</span>
+            <span class="feature-tag">HubSpot</span>
+          </div>
         </div>
 
       </div>
@@ -1596,30 +1608,29 @@
         <div class="plan-badge free">FREE</div>
         <div class="plan-price gratuit">GRATUIT</div>
         <ul class="plan-features">
-          <li><div class="feat-check gray">✓</div>3 propales actives</li>
+          <li><div class="feat-check gray">✓</div>2 propales actives</li>
+          <li><div class="feat-check gray">✓</div>4 blocs maximum par propale</li>
           <li><div class="feat-check gray">✓</div>Blocs de base</li>
           <li><div class="feat-check gray">✓</div>Lien unique par propale</li>
           <li><div class="feat-check gray">✓</div>Analytics basiques</li>
-          <li><div class="feat-check gray">✓</div>Branding Sendli</li>
         </ul>
         <a href="https://app.sendli.fr/register" class="btn-outline" style="width:100%;justify-content:center">Commencer gratuitement</a>
       </div>
 
-      <!-- Premium -->
+      <!-- premium -->
       <div class="pricing-card popular fade-up delay-2">
         <div class="popular-badge">⭐ Le plus populaire</div>
-        <div class="plan-badge premium">Premium</div>
+        <div class="plan-badge premium">premium</div>
         <div class="plan-price paid">9,90€ <span class="plan-period">/ mois</span></div>
-        <div class="plan-trial">15 jours d'essai gratuits — sans CB</div>
+        <div class="plan-trial">15 jours d'essai gratuits - sans CB</div>
         <ul class="plan-features">
           <li><div class="feat-check green">✓</div>Propales illimitées</li>
           <li><div class="feat-check green">✓</div>Tous les blocs (vidéo, pricing, signature…)</li>
           <li><div class="feat-check green">✓</div>Analytics avancés (vus, clics, temps/section)</li>
           <li><div class="feat-check green">✓</div>Notifications instantanées</li>
           <li><div class="feat-check green">✓</div>Brand Kit complet</li>
-          <li><div class="feat-check green">✓</div>Intégrations Loom &amp; Calendly</li>
+          <li><div class="feat-check green">✓</div>Intégrations</li>
           <li><div class="feat-check green">✓</div>Liens personnalisés</li>
-          <li><div class="feat-check green">✓</div>Suppression du branding Sendli</li>
           <li><div class="feat-check green">✓</div>Support prioritaire</li>
         </ul>
         <a href="https://app.sendli.fr/register" class="btn-white" style="width:100%;justify-content:center">Démarrer l'essai gratuit →</a>
@@ -1640,7 +1651,7 @@
       <!-- Set 1 -->
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-quote">"Avant Sendli, je renvoyais mon PDF 3 fois parce que les clients ne le retrouvaient plus. Maintenant j'envoie un lien et je sais en 10 minutes s'ils l'ont ouvert."</p>
+        <p class="testi-quote">"Avant sendli, je renvoyais mon PDF 3 fois parce que les clients ne le retrouvaient plus. Maintenant j'envoie un lien et je sais en 10 minutes s'ils l'ont ouvert."</p>
         <div class="testi-author"><div class="avatar a1">LM</div><div><div class="author-name">Lucas M.</div><div class="author-role">Account Executive @ SaaS RH</div></div></div>
       </div>
       <div class="testi-card">
@@ -1650,7 +1661,7 @@
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-quote">"L'intégration Loom + Calendly directement dans la propale change tout. Le prospect voit ma vidéo et réserve son créneau sans quitter la page."</p>
+        <p class="testi-quote">"L'intégration Loom directement dans la propale change tout. Le prospect voit ma vidéo de présentation sans quitter la page et on signe dans la foulée."</p>
         <div class="testi-author"><div class="avatar a3">TR</div><div><div class="author-name">Thomas R.</div><div class="author-role">Freelance consultant</div></div></div>
       </div>
       <div class="testi-card">
@@ -1670,7 +1681,7 @@
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-quote">"On a réduit notre cycle de vente de 12 jours à 6 jours en moyenne depuis qu'on utilise Sendli. Les prospects ont tout sous la main, ils décident plus vite."</p>
+        <p class="testi-quote">"On a réduit notre cycle de vente de 12 jours à 6 jours en moyenne depuis qu'on utilise sendli. Les prospects ont tout sous la main, ils décident plus vite."</p>
         <div class="testi-author"><div class="avatar a7">PL</div><div><div class="author-name">Pierre L.</div><div class="author-role">Head of Sales @ Scale-up B2B</div></div></div>
       </div>
       <div class="testi-card">
@@ -1681,7 +1692,7 @@
       <!-- Set 2 (duplicate for seamless loop) -->
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-quote">"Avant Sendli, je renvoyais mon PDF 3 fois parce que les clients ne le retrouvaient plus. Maintenant j'envoie un lien et je sais en 10 minutes s'ils l'ont ouvert."</p>
+        <p class="testi-quote">"Avant sendli, je renvoyais mon PDF 3 fois parce que les clients ne le retrouvaient plus. Maintenant j'envoie un lien et je sais en 10 minutes s'ils l'ont ouvert."</p>
         <div class="testi-author"><div class="avatar a1">LM</div><div><div class="author-name">Lucas M.</div><div class="author-role">Account Executive @ SaaS RH</div></div></div>
       </div>
       <div class="testi-card">
@@ -1691,7 +1702,7 @@
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-quote">"L'intégration Loom + Calendly directement dans la propale change tout. Le prospect voit ma vidéo et réserve son créneau sans quitter la page."</p>
+        <p class="testi-quote">"L'intégration Loom directement dans la propale change tout. Le prospect voit ma vidéo de présentation sans quitter la page et on signe dans la foulée."</p>
         <div class="testi-author"><div class="avatar a3">TR</div><div><div class="author-name">Thomas R.</div><div class="author-role">Freelance consultant</div></div></div>
       </div>
       <div class="testi-card">
@@ -1711,7 +1722,7 @@
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-quote">"On a réduit notre cycle de vente de 12 jours à 6 jours en moyenne depuis qu'on utilise Sendli. Les prospects ont tout sous la main, ils décident plus vite."</p>
+        <p class="testi-quote">"On a réduit notre cycle de vente de 12 jours à 6 jours en moyenne depuis qu'on utilise sendli. Les prospects ont tout sous la main, ils décident plus vite."</p>
         <div class="testi-author"><div class="avatar a7">PL</div><div><div class="author-name">Pierre L.</div><div class="author-role">Head of Sales @ Scale-up B2B</div></div></div>
       </div>
       <div class="testi-card">
@@ -1731,8 +1742,8 @@
 
     <div class="faq-list">
       <div class="faq-item fade-up delay-1">
-        <div class="faq-question"><span>Sendli est-il adapté aux freelances comme aux équipes commerciales ?</span><div class="faq-icon">+</div></div>
-        <div class="faq-answer"><div class="faq-answer-inner">Oui. Sendli convient aussi bien aux indépendants qui envoient quelques propales par mois qu'aux équipes sales qui gèrent des dizaines de prospects en parallèle.</div></div>
+        <div class="faq-question"><span>sendli est-il adapté aux freelances comme aux équipes commerciales ?</span><div class="faq-icon">+</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Oui. sendli convient aussi bien aux indépendants qui envoient quelques propales par mois qu'aux équipes sales qui gèrent des dizaines de prospects en parallèle.</div></div>
       </div>
       <div class="faq-item fade-up delay-2">
         <div class="faq-question"><span>Est-ce que mes propales sont hébergées de façon sécurisée ?</span><div class="faq-icon">+</div></div>
@@ -1744,15 +1755,15 @@
       </div>
       <div class="faq-item fade-up delay-2">
         <div class="faq-question"><span>L'essai gratuit de 15 jours donne-t-il accès à toutes les fonctionnalités ?</span><div class="faq-icon">+</div></div>
-        <div class="faq-answer"><div class="faq-answer-inner">Oui, les 15 premiers jours vous donnent accès à l'intégralité des fonctionnalités Premium, sans restriction et sans carte bancaire requise.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Oui, les 15 premiers jours vous donnent accès à l'intégralité des fonctionnalités premium, sans restriction et sans carte bancaire requise.</div></div>
       </div>
       <div class="faq-item fade-up delay-1">
         <div class="faq-question"><span>Que se passe-t-il après les 15 jours d'essai ?</span><div class="faq-icon">+</div></div>
-        <div class="faq-answer"><div class="faq-answer-inner">Votre compte passe automatiquement en version Free (3 propales actives). Vous pouvez passer en Premium à tout moment pour 9,90€/mois.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Votre compte passe automatiquement en version Free (2 propales actives, 4 blocs max). Vous pouvez passer en premium à tout moment pour 9,90€/mois.</div></div>
       </div>
       <div class="faq-item fade-up delay-2">
         <div class="faq-question"><span>Puis-je intégrer mes outils existants (CRM, vidéo, agenda) ?</span><div class="faq-icon">+</div></div>
-        <div class="faq-answer"><div class="faq-answer-inner">Sendli s'intègre nativement avec Loom pour les vidéos et Calendly pour la prise de RDV. D'autres intégrations sont en cours de développement.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">sendli s'intègre nativement avec Loom, Google Agenda et HubSpot. D'autres intégrations sont en cours de développement.</div></div>
       </div>
       <div class="faq-item fade-up delay-1">
         <div class="faq-question"><span>Comment fonctionne le tracking des propales ?</span><div class="faq-icon">+</div></div>
@@ -1766,10 +1777,10 @@
 <section id="cta-final">
   <div class="container text-center">
     <h2 class="cta-title fade-up">Améliorez votre taux de closing <em>dès aujourd'hui</em></h2>
-    <p class="cta-subtitle fade-up delay-1">Rejoignez les commerciaux qui utilisent Sendli pour conclure plus de deals.</p>
+    <p class="cta-subtitle fade-up delay-1">Rejoignez les commerciaux qui utilisent sendli pour conclure plus de deals.</p>
     <a href="https://app.sendli.fr/register" class="btn-white fade-up delay-2">Créer mon compte gratuitement →</a>
     <div class="cta-note fade-up delay-3">
-      ✓ 15 jours Premium offerts <span>·</span> ✓ Sans carte bancaire <span>·</span> ✓ Annulable à tout moment
+      ✓ 15 jours premium offerts <span>·</span> ✓ Sans carte bancaire <span>·</span> ✓ Annulable à tout moment
     </div>
   </div>
 </section>
@@ -1785,7 +1796,7 @@
       <a href="#">CGU</a>
       <a href="#">Confidentialité</a>
     </div>
-    <div class="footer-copy">© 2026 Sendli. Tous droits réservés.</div>
+    <div class="footer-copy">© 2026 sendli. Tous droits réservés.</div>
   </div>
 </footer>
 
