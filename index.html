@@ -1135,11 +1135,20 @@
     }
 
     @media (max-width: 560px) {
-      /* Banner */
-      #top-banner { font-size: 12px; padding: 9px 40px 9px 16px; }
+      /* Banner — masquée sur mobile */
+      #top-banner { display: none; }
+
+      /* Header collé en haut sans bannière */
+      #header { top: 0; }
+
+      /* Menu mobile collé au header */
+      nav.open { top: 68px; }
+
+      /* Bouton header plus compact */
+      .header-actions .btn-primary { font-size: 13px; padding: 8px 14px; border-radius: 8px; }
 
       /* Hero */
-      #hero { padding: 136px 0 56px; }
+      #hero { padding: 96px 0 56px; }
       body.no-banner #hero { padding-top: 96px; }
       .hero-h1 { font-size: 30px; letter-spacing: -0.5px; }
       .hero-subtitle { font-size: 16px; }
