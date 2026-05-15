@@ -1064,7 +1064,9 @@
       color: rgba(255,255,255,0.5);
       text-align: center;
     }
-    .cta-note span { margin: 0 8px; }
+    .cta-note .sep { margin: 0 8px; }
+    .nav-mobile-only { display: none; }
+    .nav-mobile-divider { display: none; }
 
     /* ── FOOTER ───────────────────────────────────────────────── */
     footer {
@@ -1120,6 +1122,9 @@
       body.no-banner nav.open { top: 68px; }
       .hamburger { display: flex; }
       .link-login { display: none; }
+      nav.open .nav-mobile-only { display: block; }
+      nav.open .nav-mobile-divider { display: block; height: 1px; background: var(--gray-border); margin: 4px 0; }
+      .nav-mobile-cta { background: var(--blue); color: var(--white) !important; text-align: center; padding: 10px 20px; border-radius: 10px; font-weight: 600; }
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
       .hero-h1 { font-size: 36px; letter-spacing: -1px; }
       .hero-subtitle { max-width: 100%; }
@@ -1144,8 +1149,8 @@
       /* Menu mobile collé au header */
       nav.open { top: 68px; }
 
-      /* Bouton header plus compact */
-      .header-actions .btn-primary { font-size: 13px; padding: 8px 14px; border-radius: 8px; }
+      /* Bouton header plus compact, sur une ligne */
+      .header-actions .btn-primary { font-size: 13px; padding: 8px 14px; border-radius: 8px; white-space: nowrap; }
 
       /* Hero */
       #hero { padding: 96px 0 56px; }
@@ -1181,9 +1186,9 @@
       #cta-final { padding: 72px 0; }
       .cta-title { font-size: 28px; }
       .btn-white { width: 100%; justify-content: center; }
-      .cta-note { font-size: 12px; }
-      .cta-note span { display: none; }
-      .cta-note { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+      .btn-arrow { display: none; }
+      .cta-note { font-size: 13px; display: flex; flex-direction: column; gap: 8px; align-items: center; }
+      .cta-note .sep { display: none; }
 
       /* Footer */
       .footer-inner { flex-direction: column; gap: 16px; }
@@ -1217,6 +1222,9 @@
       <a href="#tarifs">Tarifs</a>
       <a href="#temoignages">Témoignages</a>
       <a href="#faq">FAQ</a>
+      <div class="nav-mobile-divider"></div>
+      <a href="https://app.sendli.fr/login" class="nav-mobile-only">Connexion</a>
+      <a href="https://app.sendli.fr/register" class="nav-mobile-only nav-mobile-cta">S'inscrire gratuitement</a>
     </nav>
     <div class="header-actions">
       <a href="https://app.sendli.fr/login" class="link-login">Connexion</a>
@@ -1785,9 +1793,9 @@
   <div class="container text-center">
     <h2 class="cta-title fade-up">Améliorez votre taux de closing <em>dès aujourd'hui</em></h2>
     <p class="cta-subtitle fade-up delay-1">Rejoignez les commerciaux qui utilisent sendli pour conclure plus de deals.</p>
-    <a href="https://app.sendli.fr/register" class="btn-white fade-up delay-2">Créer mon compte gratuitement →</a>
+    <a href="https://app.sendli.fr/register" class="btn-white fade-up delay-2">Créer mon compte gratuitement <span class="btn-arrow">→</span></a>
     <div class="cta-note fade-up delay-3">
-      ✓ 15 jours premium offerts <span>·</span> ✓ Sans carte bancaire <span>·</span> ✓ Annulable à tout moment
+      <span>✓ 15 jours premium offerts</span><span class="sep">·</span><span>✓ Sans carte bancaire</span><span class="sep">·</span><span>✓ Annulable à tout moment</span>
     </div>
   </div>
 </section>
