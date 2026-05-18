@@ -797,6 +797,54 @@
     .notif-time { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
     .notif-ago { font-size: 11px; color: var(--text-muted); flex-shrink: 0; margin-top: 3px; }
 
+    .fade-up.delay-6 { transition-delay: 0.6s; }
+    /* Comments feature */
+    .comments-demo { display: flex; flex-direction: column; gap: 10px; }
+    .comment-bubble {
+      background: var(--white);
+      border: 1px solid var(--gray-border);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+    .comment-meta {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 6px;
+    }
+    .comment-avatar {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      font-size: 8px;
+      font-weight: 700;
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .comment-author { font-size: 11px; font-weight: 700; color: var(--text); }
+    .comment-when { font-size: 10px; color: var(--text-muted); margin-left: auto; }
+    .comment-body { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .comment-reply-block {
+      margin-top: 10px;
+      padding: 9px 11px;
+      background: rgba(17,17,132,0.05);
+      border-left: 2px solid var(--blue);
+      border-radius: 6px;
+    }
+    .comment-reply-meta { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+    .comment-reply-name { font-size: 10px; font-weight: 700; color: var(--blue); }
+    .comment-reply-text { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .comment-add-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600; color: var(--blue);
+      background: rgba(17,17,132,0.06);
+      border: 1px solid rgba(17,17,132,0.12);
+      border-radius: 999px;
+      padding: 7px 14px;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
     /* ── SECTION 5 — PRICING ──────────────────────────────────── */
     #tarifs { background: var(--white); }
     .pricing-grid {
@@ -1448,6 +1496,10 @@
           <div class="feature-item-title">Intégrations</div>
           <p class="feature-item-desc">Google Agenda, HubSpot, Loom</p>
         </div>
+        <div class="feature-item fade-up delay-6" data-feature="commentaires">
+          <div class="feature-item-title">Commentaires</div>
+          <p class="feature-item-desc">Échangez directement sur la propale</p>
+        </div>
       </div>
 
       <!-- Right — Feature detail -->
@@ -1606,6 +1658,38 @@
           </div>
         </div>
 
+        <!-- Commentaires -->
+        <div class="feature-panel" id="panel-commentaires">
+          <div class="feature-panel-title">Commentaires</div>
+          <p class="feature-panel-desc">Vos prospects peuvent laisser un commentaire directement sur la propale en un clic. Vous êtes notifié instantanément et pouvez répondre depuis votre interface. Fini les allers-retours par email pour une simple question.</p>
+          <div class="feature-visual">
+            <div class="comments-demo">
+              <div class="comment-bubble">
+                <div class="comment-meta">
+                  <div class="comment-avatar" style="background:#f97316">TB</div>
+                  <span class="comment-author">Thomas B. (visiteur)</span>
+                  <span class="comment-when">il y a 2 min</span>
+                </div>
+                <div class="comment-body">"Quelle est la durée minimale d'engagement ?"</div>
+                <div class="comment-reply-block">
+                  <div class="comment-reply-meta">
+                    <div class="comment-avatar" style="background:#111184">Vous</div>
+                    <span class="comment-reply-name">Vous</span>
+                    <span style="font-size:10px;color:var(--text-muted);margin-left:auto">À l'instant</span>
+                  </div>
+                  <div class="comment-reply-text">Aucune ! Résiliable à tout moment, sans engagement minimum.</div>
+                </div>
+              </div>
+              <div class="comment-add-btn">💬 Laisser un commentaire</div>
+            </div>
+          </div>
+          <div class="feature-tags">
+            <span class="feature-tag">Commentaire en 1 clic</span>
+            <span class="feature-tag">Notification instantanée</span>
+            <span class="feature-tag">Réponse depuis l'interface</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -1643,6 +1727,7 @@
           <li><div class="feat-check green">✓</div>Tous les blocs (vidéo, pricing, signature…)</li>
           <li><div class="feat-check green">✓</div>Analytics avancés (vus, clics, temps/section)</li>
           <li><div class="feat-check green">✓</div>Notifications instantanées</li>
+          <li><div class="feat-check green">✓</div>Commentaires sur la propale</li>
           <li><div class="feat-check green">✓</div>Brand Kit complet</li>
           <li><div class="feat-check green">✓</div>Intégrations</li>
           <li><div class="feat-check green">✓</div>Liens personnalisés</li>
